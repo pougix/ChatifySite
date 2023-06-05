@@ -50,7 +50,7 @@ class MessageController extends Controller
                 $result = DB::table('embeddings')
                     ->select("text")
                     ->selectSub("embedding <=> '{$vector}'::vector", "distance")
-                    ->where('embed_collection_id', $chat->embed_collection->id)
+                    //->where('embed_collection_id', $chat->embed_collection->id)
                     ->orderBy('distance', 'asc')
                     ->limit(2)
                     ->get();
