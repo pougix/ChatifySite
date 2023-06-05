@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('embed_collections', function (Blueprint $table) {
             $table->uuid("id")->primary();
-            $table->text("name");
-            $table->text("meta_data");
+            $table->longText("name");
+            $table->longText("meta_data");
             $table->timestamps();
         });
     }
